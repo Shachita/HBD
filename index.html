@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>
+        Daru Daru!!👯
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="entry">
+        <audio autoplay loop id="my-audio">
+            <source src="sounds/dabangg.mp3" >
+        </audio>
+
+        <h2 style="margin-left: 40px; font-size: 3rem; color: whitesmoke;">Happy Birthday Meri dusri Maa!!🙃</h2>
+        <div class="form">
+            <label>Socho Zara 2020!! 😝</label>
+            <br>
+            <input type="text" id="input" />
+            <br>
+            <button id="btn">Dekhne do na ab!</button>
+
+        </div>
+
+
+    </div>
+    <div class="panels vis">
+        <div class="panel panel1">
+            <p>&nbsp; Happy Birthay Daru! From coachings to school to twinning to highway to 6th Dec to 2020!😍 </p>
+            <p class="main"><span style="color: whitesmoke; font-weight: 100px;">A</span></p>
+            <p>Big Virtual Hug! Our journey has no words. It has just been... 😈 </p>
+        </div>
+        <div class="panel panel2">
+            <p>You never fail to make me proud! Matlab saala ab toh main chida bhi nahi sakti! Ache din aane waale hai 🦸 &nbsp;</p>
+            <p class="main"> I </p>
+            <p>Love You and your stupid jokes!👭 I wonder tere college waale kaise jhelte the tujhe</p>
+        </div>
+        <div class="panel panel3">
+            <p>&nbsp; It's been a ritual for us to not meet on your birthday😆 Ab toh aadat ho jaani chahiye barbie doll! 🤾 &nbsp; </p>
+            <p class="main">R</p>
+            <p>oad trips in our gaon had been too much fun always! Highway Highway 😜</p>
+        </div>
+        <div class="panel panel4">
+            <p>&nbsp; &nbsp; &nbsp; I think this quarantine is a bigger barrier than &nbsp; &nbsp; &nbsp; ENS! You have no idea how much I am dying to meet you!🙃</p>
+            <p class="main">3</p>
+            <p> &nbsp; Fine maan liya! I miss you!🙄Just trying to hold &nbsp; my excitement 👻 &nbsp; </p>
+        </div>
+        <div class="panel panel5">
+            <p>All the best for your future girl! &hearts; Logo ko bol de hum dono se jalna band karde! 🤐</p>
+            <p class="main">7</p>
+            <p>Finally! 23 saal ki hogayi hai ab toh IMAGICA chal le please 💁</p>
+        </div>
+    </div>
+    <script>
+        const enter = document.querySelector('.entry');
+        const input = document.getElementById('input');
+        const mainPanel = document.querySelector('.panels');
+        const panels = document.querySelectorAll('.panel');
+        const button = document.getElementById('btn');
+        button.addEventListener('click', () => {
+            if (input.value === "barbiedoll") {
+                enter.classList.add('vis');
+                console.log(mainPanel);
+                mainPanel.classList.remove('vis');
+                document.getElementById("my-audio").setAttribute('src', 'sounds/happy.mp3');
+
+
+            }
+
+        });
+
+        //console.log(document.getElementsByTagName('input').)
+
+        function toggleOpen() {
+            console.log('Hello');
+            this.classList.toggle('open');
+            this.classList.toggle('open-active');
+        }
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    </script>
+</body>
+
+</html>
